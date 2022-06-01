@@ -18,7 +18,7 @@ def make_edge_smooth(dataset_name, img_size) :
 
     file_list = glob('dataset/{}/{}/*.*'.format(dataset_name, 'style'))
     save_dir = 'dataset/{}/smooth'.format(dataset_name)
-    
+    print(file_list)
     kernel_size = 5
     kernel = np.ones((kernel_size, kernel_size), np.uint8)
     gauss = cv2.getGaussianKernel(kernel_size, 0)
